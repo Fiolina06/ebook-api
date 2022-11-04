@@ -7,6 +7,7 @@ use App\Http\Controllers\heloController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AuthorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +30,8 @@ Route::post('/login', [AuthController::class, 'login']);
 
 Route::get('/books', [BookController::class,'index']);
 Route::get('/books/{id}', [BookController::class,'show']);
-Route::get('/Authors', [AuthorController::class,'index']);
-Route::get('/Authors/{id}', [AuthorController::class,'show']);
+Route::get('/authors', [AuthorController::class,'index']);
+Route::get('/authors/{id}', [AuthorController::class,'show']);
 
 //protected routes
 Route::middleware('auth:sanctum')->group(function () {
